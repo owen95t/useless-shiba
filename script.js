@@ -18,14 +18,14 @@ function mouseMoved(){
   console.log('mousemoved');
   document.getElementById('message').innerHTML = 'STOP MOVING YOUR MOUSE!!!';
   document.body.style.backgroundColor = "red";
-  document.getElementById("shiba").src = 'angry-shiba.jpeg';
+  document.getElementById("shiba").src = "angry-shiba.jpeg";
 }
 
 function stopped(){
   console.log('mouse stopped');
   document.getElementById('message').innerHTML = 'Dont move your mouse';
   document.body.style.backgroundColor = "lightgreen";
-  document.getElementById("shiba").src = 'calm-shiba.jpeg';
+  document.getElementById("shiba").src = "happy-shiba.jpeg";
 }
 
 function preloadImages() {
