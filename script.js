@@ -18,21 +18,25 @@ function mouseMoved(){
   console.log('mousemoved');
   document.getElementById('message').innerHTML = 'STOP MOVING YOUR MOUSE!!!';
   document.body.style.backgroundColor = "red";
-  document.getElementById("shiba").src = "./angry-shiba.jpeg";
+  //document.getElementById("shiba").src = "./angry-shiba.jpeg";
+  let x = document.getElementById('shiba');
+  x.setAttribute('src', angry.src);
 }
 
 function stopped(){
   console.log('mouse stopped');
   document.getElementById('message').innerHTML = 'Dont move your mouse';
   document.body.style.backgroundColor = "lightgreen";
-  document.getElementById("shiba").src = "./happy-shiba.jpeg";
+  // document.getElementById("shiba").src = "./happy-shiba.jpeg";
+  let y = document.getElementById('shiba');
+  y.setAttribute('src', calm.src);
 }
 
 function preloadImages() {
   calm = new Image();
-  calm.src = 'happy-shiba.jpeg';
+  calm.src = './happy-shiba.jpeg';
   angry = new Image();
-  angry.src = 'angry-shiba.jpeg';
+  angry.src = './angry-shiba.jpeg';
 }
 
 // function changeImage(){
