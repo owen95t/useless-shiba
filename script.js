@@ -1,6 +1,7 @@
 let timer;
 //let image = document.getElementById("shiba");
-let timer2;
+let calm;
+let angry;
 
 init();
 
@@ -10,20 +11,28 @@ function init(){
     clearTimeout(timer);
     timer = setTimeout(stopped, 100);
   });
+  preloadImages();
 }
 
 function mouseMoved(){
   console.log('mousemoved');
   document.getElementById('message').innerHTML = 'STOP MOVING YOUR MOUSE!!!';
   document.body.style.backgroundColor = "red";
-  document.getElementById("shiba").src = "angry-shiba.jpeg";
+  document.getElementById("shiba").src = angry;
 }
 
 function stopped(){
   console.log('mouse stopped');
   document.getElementById('message').innerHTML = 'Dont move your mouse';
   document.body.style.backgroundColor = "lightgreen";
-  document.getElementById("shiba").src = "happy-shiba.jpeg";
+  document.getElementById("shiba").src = calm;
+}
+
+function preloadImages() {
+  calm = new Image();
+  calm.src = 'happy-shiba.jpeg';
+  angry = new Image();
+  angry.src = 'angry-shiba.jpeg';
 }
 
 // function changeImage(){
